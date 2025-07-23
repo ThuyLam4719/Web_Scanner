@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Lịch sử các lần quét</h2>
+
+{% if history %}
+{% for url, result in history.items() %}
+<div class="history-entry">
+    <h3>{{ url }}</h3>
+    <pre class="result-box">{{ result }}</pre>
+</div>
+{% endfor %}
+{% else %}
+<p>Chưa có lịch sử quét nào.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Quét lỗ hổng SQLi</h2>
+
+<form id="scanForm">
+    <input type="text" name="url"
+        placeholder="Nhập URL cần quét (ví dụ: http://testphp.vulnweb.com/artists.php?artist=)" required>
+    <button type="submit">Quét</button>
+</form>
+
+<div id="result-short"></div>
+<div id="result-full" class="result-box" style="display: none;"></div>
+
+<script>
+    const form = document.getElementById("scanForm");
+    const shortDiv = document.getElementById("result-short");
+    const fullDiv = document.getElementById("result-full");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch("/scan", {
+            method: "POST",
+            body: formData
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    shortDiv.innerHTML = `<strong>${data.short}</strong>`;
+                    fullDiv.textContent = data.full;
+                    fullDiv.style.display = "block";
+                } else {
+                    shortDiv.innerHTML = `<span style="color:red;">Lỗi: ${data.error}</span>`;
+                    fullDiv.style.display = "none";
+                }
+            })
+            .catch(err => {
+                shortDiv.innerHTML = `<span style="color:red;">Lỗi kết nối!</span>`;
+                fullDiv.style.display = "none";
+            });
+    });
+</script>
+{% endblock %}

