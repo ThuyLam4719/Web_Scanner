@@ -1,0 +1,9 @@
+<script>alert(1)</script>
+"><img src=x onerror=alert(2)>
+'><svg/onload=alert(3)>
+"><svg onmouseover=alert(4)>
+<iframe src="javascript:alert(5)">
+<math href="javascript:alert(6)">
+<details open ontoggle=alert(7)>
+<marquee onstart=alert(8)>
+<video src=1 onerror=alert(9)>

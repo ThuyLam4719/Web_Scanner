@@ -1,91 +1,57 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 
 <head>
-    <meta charset="UTF-8">
     <title>Lịch sử quét</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            padding: 2rem;
-        }
-
-        table td,
-        table th {
-            vertical-align: middle !important;
-        }
-
-        .trash-icon {
-            cursor: pointer;
-            color: red;
-        }
-
-        .toggle-btn {
-            cursor: pointer;
-            color: blue;
-        }
-
-        pre {
-            white-space: pre-wrap;
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 5px;
-            display: none;
-        }
-    </style>
+    <meta charset="utf-8">
 </head>
 
 <body>
-
-    <h2>Lịch sử quét SQLi</h2>
-    <table class="table table-bordered table-hover">
-        <thead class="thead-dark">
-            <tr>
-                <th>STT</th>
-                <th>Thời gian quét</th>
-                <th>Tên miền</th>
-                <th>Xóa</th>
-            </tr>
-        </thead>
-        <tbody id="history-table">
-            {% for i, entry in enumerate(history, start=1) %}
-            <tr>
-                <td>{{ i }}</td>
-                <td>{{ entry.time }}</td>
-                <td class="toggle-btn" onclick="toggleResult('result{{ i }}')">{{ entry.domain }}</td>
-                <td>
-                    <form action="/delete/{{ entry.domain }}" method="post"
-                        onsubmit="return confirm('Bạn có chắc chắn muốn xóa?');">
-                        <button type="submit" class="btn btn-sm btn-link text-danger">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </form>
-                </td>
-            </tr>
-            <tr id="result{{ i }}-row" style="display: none;">
-                <td colspan="4">
-                    <pre id="result{{ i }}">{{ entry.content }}</pre>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
+    {% extends "base.html" %}
+    {% block content %}
+    <h2 style="text-align:center;"><span style="vertical-align:middle;"></span> LỊCH SỬ CÁC LẦN QUÉT</h2>
+    <table class="table">
+        <tr>
+            <th style="text-align:center;">STT</th>
+            <th style="text-align:center;">Domain</th>
+            <th style="text-align:center;">Thời gian</th>
+            <th class="result-col" style="text-align:center;">Kết quả</th>
+            <th class="detail-col" style="text-align:center;">Xem chi tiết</th>
+        </tr>
+        {% for entry in history %}
+        <tr>
+            <td style="text-align:center;vertical-align:middle;">{{ entry.stt }}</td>
+            <td style="text-align:center;vertical-align:middle;">{{ entry.domain }}</td>
+            <td style="text-align:center;vertical-align:middle;">{{ entry.time }}</td>
+            <td class="result-col" style="text-align:center;vertical-align:middle;">
+                <span style="font-weight:600;">{{ entry.vuln_name }}</span>
+            </td>
+            <td class="detail-col" style="text-align:center;vertical-align:middle;">
+                <a href="#" class="toggle-detail" data-target="full-{{ loop.index0 }}"
+                    style="color:var(--primary);font-weight:600;">Xem</a>
+                <div class="full-result" id="full-{{ loop.index0 }}" style="display:none;margin-top:8px;">
+                    <pre style="max-height:400px;overflow:auto;">{{ entry.content }}</pre>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
     </table>
-
     <script>
-        function toggleResult(id) {
-            const row = document.getElementById(id + "-row");
-            const content = document.getElementById(id);
-            if (row.style.display === "none") {
-                row.style.display = "table-row";
-                content.style.display = "block";
-            } else {
-                row.style.display = "none";
-                content.style.display = "none";
-            }
-        }
+        document.querySelectorAll('.toggle-detail').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.getElementById(btn.dataset.target);
+                if (target.style.display === 'none' || target.style.display === '') {
+                    target.style.display = 'block';
+                    btn.textContent = 'Thu gọn';
+                } else {
+                    target.style.display = 'none';
+                    btn.textContent = 'Xem';
+                }
+            });
+        });
     </script>
-
+    {% endblock %}
 </body>
 
 </html>

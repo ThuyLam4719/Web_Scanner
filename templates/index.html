@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Quét lỗ hổng SQLi</h2>
+<h2>NHẬP URL</h2>
 
 <form id="scanForm">
-    <input type="text" name="url"
-        placeholder="Nhập URL cần quét (ví dụ: http://testphp.vulnweb.com/artists.php?artist=)" required>
+    <input type="text" name="url" placeholder="Nhập URL cần quét" required>
     <button type="submit">Quét</button>
 </form>
+
+<div id="loading-spinner" style="display:none;justify-content:center;align-items:center;margin:18px 0;">
+    <div class="spinner"></div>
+    <span style="margin-left:12px;color:var(--primary);font-weight:600;">Đang quét...</span>
+</div>
 
 <div id="result-short"></div>
 <div id="result-full" class="result-box" style="display: none;"></div>
@@ -15,9 +19,13 @@
     const form = document.getElementById("scanForm");
     const shortDiv = document.getElementById("result-short");
     const fullDiv = document.getElementById("result-full");
+    const spinner = document.getElementById("loading-spinner");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
+        shortDiv.innerHTML = "";
+        fullDiv.style.display = "none";
+        spinner.style.display = "flex";
         const formData = new FormData(form);
         fetch("/scan", {
             method: "POST",
@@ -25,9 +33,10 @@
         })
             .then(res => res.json())
             .then(data => {
+                spinner.style.display = "none";
                 if (data.success) {
-                    shortDiv.innerHTML = `<strong>${data.short}</strong>`;
-                    fullDiv.textContent = data.full;
+                    shortDiv.innerHTML = `<strong style='color:var(--primary);font-size:1.1em;'>==&gt;&gt; ${data.short}</strong>`;
+                    fullDiv.innerHTML = `<pre style='white-space:pre-wrap;margin:0;'>${data.full.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>`;
                     fullDiv.style.display = "block";
                 } else {
                     shortDiv.innerHTML = `<span style="color:red;">Lỗi: ${data.error}</span>`;
@@ -35,6 +44,7 @@
                 }
             })
             .catch(err => {
+                spinner.style.display = "none";
                 shortDiv.innerHTML = `<span style="color:red;">Lỗi kết nối!</span>`;
                 fullDiv.style.display = "none";
             });

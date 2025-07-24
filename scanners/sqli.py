@@ -62,6 +62,8 @@ def trich_form(url):
 
 # --- Hàm quét SQLi (GET hoặc POST hoặc FORM) ---
 def scan_sqli(target_url, output):
+    output.write("======= SQLi =======\n")
+    output.write("\n")
     output.write("[*] Đang kiểm tra SQL Injection trên: {}\n".format(target_url))
 
     parsed = urlparse(target_url)
@@ -114,6 +116,7 @@ def scan_sqli(target_url, output):
             return
 
         for form in forms:
+            input_names = list(form['data'].keys())
             for ten_file in danh_sach_file:
                 try:
                     with open(ten_file, "r", encoding="utf-8") as f:
@@ -126,22 +129,27 @@ def scan_sqli(target_url, output):
                     payload = dong.strip()
                     if not payload:
                         continue
+                    # Thử từng input một với payload, các input còn lại giữ giá trị mặc định
+                    for input_name in input_names:
+                        data_gui = {}
+                        for k in input_names:
+                            if k == input_name:
+                                data_gui[k] = form['data'][k] + payload
+                            else:
+                                data_gui[k] = form['data'][k]
+                        try:
+                            if form['method'] == 'post':
+                                res = requests.post(form['url'], data=data_gui, timeout=5)
+                            else:
+                                res = requests.get(form['url'], params=data_gui, timeout=5)
 
-                    data_gui = {k: v + payload for k, v in form['data'].items()}
-
-                    try:
-                        if form['method'] == 'post':
-                            res = requests.post(form['url'], data=data_gui, timeout=5)
-                        else:
-                            res = requests.get(form['url'], params=data_gui, timeout=5)
-
-                        tu_khoa = ["mysql", "sql syntax", "warning", "ORA-", "syntax error", "unterminated"]
-                        for tu in tu_khoa:
-                            if tu.lower() in res.text.lower():
-                                payload_nguy_hiem.append(payload)
-                                break
-                    except Exception as loi:
-                        output.write("[!] Lỗi khi gửi request đến form: {}\n".format(loi))
+                            tu_khoa = ["mysql", "sql syntax", "warning", "ORA-", "syntax error", "unterminated"]
+                            for tu in tu_khoa:
+                                if tu.lower() in res.text.lower():
+                                    payload_nguy_hiem.append(f"{input_name}={payload}")
+                                    break
+                        except Exception as loi:
+                            output.write("[!] Lỗi khi gửi request đến form: {}\n".format(loi))
 
     # Ghi kết quả ra output
     if payload_nguy_hiem:
