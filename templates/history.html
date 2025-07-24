@@ -1,15 +1,91 @@
-{% extends "base.html" %}
-{% block content %}
-<h2>Lịch sử các lần quét</h2>
+<!DOCTYPE html>
+<html lang="vi">
 
-{% if history %}
-{% for url, result in history.items() %}
-<div class="history-entry">
-    <h3>{{ url }}</h3>
-    <pre class="result-box">{{ result }}</pre>
-</div>
-{% endfor %}
-{% else %}
-<p>Chưa có lịch sử quét nào.</p>
-{% endif %}
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch sử quét</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            padding: 2rem;
+        }
+
+        table td,
+        table th {
+            vertical-align: middle !important;
+        }
+
+        .trash-icon {
+            cursor: pointer;
+            color: red;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+            color: blue;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Lịch sử quét SQLi</h2>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>STT</th>
+                <th>Thời gian quét</th>
+                <th>Tên miền</th>
+                <th>Xóa</th>
+            </tr>
+        </thead>
+        <tbody id="history-table">
+            {% for i, entry in enumerate(history, start=1) %}
+            <tr>
+                <td>{{ i }}</td>
+                <td>{{ entry.time }}</td>
+                <td class="toggle-btn" onclick="toggleResult('result{{ i }}')">{{ entry.domain }}</td>
+                <td>
+                    <form action="/delete/{{ entry.domain }}" method="post"
+                        onsubmit="return confirm('Bạn có chắc chắn muốn xóa?');">
+                        <button type="submit" class="btn btn-sm btn-link text-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <tr id="result{{ i }}-row" style="display: none;">
+                <td colspan="4">
+                    <pre id="result{{ i }}">{{ entry.content }}</pre>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+        function toggleResult(id) {
+            const row = document.getElementById(id + "-row");
+            const content = document.getElementById(id);
+            if (row.style.display === "none") {
+                row.style.display = "table-row";
+                content.style.display = "block";
+            } else {
+                row.style.display = "none";
+                content.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

