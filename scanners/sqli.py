@@ -43,12 +43,29 @@ def trich_form(url):
             form_url = urljoin(url, action)
 
             inputs = {}
+            # Lấy input thường
             for input_tag in form.find_all('input'):
                 name = input_tag.get('name')
                 if not name:
                     continue
-                inputs[name] = 'test'  # Giá trị mặc định sẽ được ghi đè bởi payload
-
+                input_type = input_tag.get('type', 'text').lower()
+                if input_type == 'checkbox':
+                    # Nếu có checked thì gửi giá trị, không thì bỏ qua
+                    if input_tag.has_attr('checked') or input_tag.get('value'):
+                        inputs[name] = input_tag.get('value', 'on')
+                else:
+                    inputs[name] = input_tag.get('value', 'test')
+            # Lấy select
+            for select_tag in form.find_all('select'):
+                name = select_tag.get('name')
+                if not name:
+                    continue
+                # Lấy option đầu tiên có value
+                option = select_tag.find('option')
+                if option and option.get('value'):
+                    inputs[name] = option.get('value')
+                else:
+                    inputs[name] = '1'
             danh_sach_forms.append({
                 "url": form_url,
                 "method": method,
@@ -63,7 +80,6 @@ def trich_form(url):
 # --- Hàm quét SQLi (GET hoặc POST hoặc FORM) ---
 def scan_sqli(target_url, output):
     output.write("======= SQLi =======\n")
-    output.write("\n")
     output.write("[*] Đang kiểm tra SQL Injection trên: {}\n".format(target_url))
 
     parsed = urlparse(target_url)
@@ -160,21 +176,3 @@ def scan_sqli(target_url, output):
         output.write("[✓] Không phát hiện lỗ hổng SQLi.\n")
     output.write("\n")
 
-    # --- Ghi vào lịch sử ---
-    scan_result = output.getvalue()
-    entry = {
-        "domain": target_url,
-        "time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "result": scan_result
-    }
-
-    try:
-        with open("history.json", "r") as f:
-            history = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        history = []
-
-    history.append(entry)
-
-    with open("history.json", "w") as f:
-        json.dump(history, f, indent=2)

@@ -106,6 +106,7 @@ h3 {
     white-space: nowrap;
     border-right: 3px solid #00ffae;
     animation: blink-caret 0.7s step-end infinite;
+    text-align: center;
 }
 
 @keyframes typing {

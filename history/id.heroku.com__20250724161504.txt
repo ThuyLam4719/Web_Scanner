@@ -1,16 +1,30 @@
-[TIME] 2025-07-24 08:54:59
+[TIME] 2025-07-24 16:15:04
 [URL] https://id.heroku.com/login
+[SUMMARY] AN TOÀN
 ======= SQLi =======
-
 [*] Đang kiểm tra SQL Injection trên: https://id.heroku.com/login
 [!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
 [✓] Không phát hiện lỗ hổng SQLi.
 
 
 ======= XSS =======
-
 [*] Đang kiểm tra XSS trên: https://id.heroku.com/login
 [!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
 [✓] Không phát hiện lỗ hổng XSS.
+
+
+======= LFI =======
+[*] Đang kiểm tra LFI trên: https://id.heroku.com/login
+[✓] Không phát hiện lỗ hổng LFI.
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: https://id.heroku.com/login
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: https://id.heroku.com/login
+[✓] Không phát hiện lỗ hổng XXE.
 
 

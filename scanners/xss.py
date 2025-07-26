@@ -52,7 +52,6 @@ def trich_form(url):
 
 def scan_xss(target_url, output):
     output.write("======= XSS =======\n")
-    output.write("\n")
     output.write(f"[*] Đang kiểm tra XSS trên: {target_url}\n")
     parsed = urlparse(target_url)
     has_params = bool(parse_qs(parsed.query, keep_blank_values=True))
@@ -106,11 +105,3 @@ def scan_xss(target_url, output):
     else:
         output.write("[✓] Không phát hiện lỗ hổng XSS.\n")
     output.write("\n")
-    # Lưu lịch sử
-    if not os.path.exists(HISTORY_DIR):
-        os.makedirs(HISTORY_DIR)
-    domain = parsed.netloc or target_url
-    filename = domain.replace(':', '_').replace('/', '_') + "_xss.txt"
-    filepath = os.path.join(HISTORY_DIR, filename)
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(output.getvalue())
