@@ -1,0 +1,25 @@
+[TIME] 2025-08-25 00:12:34
+[URL] https://www.facebook.com/
+[SUMMARY] AN TOÀN
+======= SQLi =======
+[*] Đang kiểm tra SQL Injection trên: https://www.facebook.com/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+======= XSS =======
+[*] Đang kiểm tra XSS trên: https://www.facebook.com/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[✓] Không phát hiện lỗ hổng XSS.
+
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: https://www.facebook.com/
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: https://www.facebook.com/
+[!] Form không có trường file upload.
+

@@ -7,7 +7,7 @@ CMDI_PAYLOAD_FILE = "payloads/cmdi.txt"
 
 CMDI_SIGNS = [
     # Linux/Unix
-    "uid=", "gid=", "root:x:", "www-data", "/bin/bash", "/bin/sh", "/bin/ash", "/bin/dash", "/bin/zsh", "/bin/csh", "/bin/tcsh", "/bin/ksh", "/bin/fish", "/bin/", "/usr/", "/etc/", "root@", "total ", "drwx", "-rw-", "bash: ", "Linux",
+    "uid=", "gid=", "root:x:", "www-data", "/bin/bash", "/bin/sh", "/bin/ash", "/bin/dash", "/bin/zsh", "/bin/csh", "/bin/tcsh", "/bin/ksh", "/bin/fish", "/bin/", "/usr/", "root@", "total ", "drwx", "-rw-", "bash: ", "Linux",
     # Windows
     "Windows", "Microsoft", "C:\\", "D:\\", "system32", "nt authority", "cmd.exe", "C:/", "D:/", "Volume in drive", "Directory of"
 ]

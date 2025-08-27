@@ -1,0 +1,56 @@
+[TIME] 2025-08-11 14:35:21
+[URL] http://103.97.125.56:31007/
+[SUMMARY] AN TOÀN
+======= SQLi =======
+[*] Đang kiểm tra SQL Injection trên: http://103.97.125.56:31007/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra SQLi.
+
+
+======= XSS =======
+[*] Đang kiểm tra XSS trên: http://103.97.125.56:31007/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra XSS.
+
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: http://103.97.125.56:31007/
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: http://103.97.125.56:31007/
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b98e3f0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b98d6e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85baf3650>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c8160>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c8380>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c85a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c87c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c89e0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c8c00>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c8e20>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c9150>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c9370>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c9480>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c96a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c98c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c9ae0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23020>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb22f10>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23790>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23570>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23350>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23130>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb238a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23bd0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85bb23df0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c98c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[!] Lỗi khi gửi request: HTTPConnectionPool(host='103.97.125.56', port=31007): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff85b9c96a0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[✓] Không phát hiện lỗ hổng XXE.
+
+

@@ -1,0 +1,33 @@
+[TIME] 2025-08-24 17:47:28
+[URL] http://localhost/cmd/
+[SUMMARY] CMDi
+======= SQLi =======
+[*] Đang kiểm tra SQL Injection trên: http://localhost/cmd/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+======= XSS =======
+[*] Đang kiểm tra XSS trên: http://localhost/cmd/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[✓] Không phát hiện lỗ hổng XSS.
+
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: http://localhost/cmd/
+[!] Có thể bị tấn công CMDi với các payloads:
+    - ; cat /etc/passwd
+    - ; uname -a
+    - ; whoami
+    - ;id
+    - | cat /etc/passwd
+    - | uname -a
+    - | whoami
+    - |id
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: http://localhost/cmd/
+[!] Form không có trường file upload.
+

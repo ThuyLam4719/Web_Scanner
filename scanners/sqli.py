@@ -87,9 +87,7 @@ def scan_sqli(target_url, output):
 
     payload_nguy_hiem = []
     danh_sach_file = [
-        "payloads/error_based.txt",
-        "payloads/boolean_based.txt",
-        "payloads/time_based.txt"
+        "payloads/error_based.txt"
     ]
 
     # Trường hợp URL có tham số: test trực tiếp trên URL
@@ -113,7 +111,8 @@ def scan_sqli(target_url, output):
 
                 try:
                     res = requests.get(url_kiem_tra, timeout=5)
-                    tu_khoa = ["mysql", "sql syntax", "warning", "ORA-", "syntax error", "unterminated"]
+                    
+                    tu_khoa = ["mysql", "sql syntax", "warning", "ORA-", "syntax error", "unterminated", "mysql_fetch_assoc()"]
                     for tu in tu_khoa:
                         if tu.lower() in res.text.lower():
                             payload_nguy_hiem.append(payload)

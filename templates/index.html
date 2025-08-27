@@ -3,7 +3,8 @@
 <h2>NHẬP URL</h2>
 
 <form id="scanForm">
-    <input type="text" name="url" placeholder="Nhập URL cần quét" required>
+    <input type="text" name="url" placeholder="Nhập URL cần quét" required pattern="https?://.+"
+        title="URL phải bắt đầu bằng http:// hoặc https://">
     <button type="submit">Quét</button>
 </form>
 

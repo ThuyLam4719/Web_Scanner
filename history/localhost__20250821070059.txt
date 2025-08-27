@@ -1,4 +1,4 @@
-[TIME] 2025-07-24 16:10:13
+[TIME] 2025-08-21 07:00:59
 [URL] http://localhost/sqli/
 [SUMMARY] SQLi
 ======= SQLi =======
@@ -56,10 +56,6 @@
 [!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
 [✓] Không phát hiện lỗ hổng XSS.
 
-
-======= LFI =======
-[*] Đang kiểm tra LFI trên: http://localhost/sqli/
-[✓] Không phát hiện lỗ hổng LFI.
 
 
 ======= CMDi =======

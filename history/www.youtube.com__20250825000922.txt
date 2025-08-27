@@ -1,0 +1,27 @@
+[TIME] 2025-08-25 00:09:22
+[URL] https://www.youtube.com/
+[SUMMARY] AN TOÀN
+======= SQLi =======
+[*] Đang kiểm tra SQL Injection trên: https://www.youtube.com/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra SQLi.
+
+
+======= XSS =======
+[*] Đang kiểm tra XSS trên: https://www.youtube.com/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra XSS.
+
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: https://www.youtube.com/
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: https://www.youtube.com/
+[!] Không tìm thấy form upload trên trang.
+

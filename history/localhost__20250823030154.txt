@@ -1,8 +1,8 @@
-[TIME] 2025-07-24 23:47:38
-[URL] http://localhost/sqli/index.php
+[TIME] 2025-08-23 03:01:54
+[URL] http://localhost/sqli/
 [SUMMARY] SQLi
 ======= SQLi =======
-[*] Đang kiểm tra SQL Injection trên: http://localhost/sqli/index.php
+[*] Đang kiểm tra SQL Injection trên: http://localhost/sqli/
 [!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
 [!] Có thể bị tấn công SQLi với các payloads:
     - txt_uname=' OR '1'='1
@@ -52,23 +52,19 @@
 
 
 ======= XSS =======
-[*] Đang kiểm tra XSS trên: http://localhost/sqli/index.php
+[*] Đang kiểm tra XSS trên: http://localhost/sqli/
 [!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
 [✓] Không phát hiện lỗ hổng XSS.
 
 
-======= LFI =======
-[*] Đang kiểm tra LFI trên: http://localhost/sqli/index.php
-[✓] Không phát hiện lỗ hổng LFI.
-
 
 ======= CMDi =======
-[*] Đang kiểm tra Command Injection trên: http://localhost/sqli/index.php
+[*] Đang kiểm tra Command Injection trên: http://localhost/sqli/
 [✓] Không phát hiện lỗ hổng CMDi.
 
 
 ======= XXE =======
-[*] Đang kiểm tra XXE trên: http://localhost/sqli/index.php
+[*] Đang kiểm tra XXE trên: http://localhost/sqli/
 [✓] Không phát hiện lỗ hổng XXE.
 
 

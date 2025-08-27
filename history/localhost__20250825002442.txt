@@ -1,0 +1,27 @@
+[TIME] 2025-08-25 00:24:42
+[URL] http://localhost/thucung/trangchu.php
+[SUMMARY] AN TOÀN
+======= SQLi =======
+[*] Đang kiểm tra SQL Injection trên: http://localhost/thucung/trangchu.php
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra SQLi.
+
+
+======= XSS =======
+[*] Đang kiểm tra XSS trên: http://localhost/thucung/trangchu.php
+[!] URL không chứa tham số. Đang thử tìm form để kiểm tra...
+[X] Không tìm thấy form để kiểm tra.
+[✓] Không thể thực hiện kiểm tra XSS.
+
+
+
+======= CMDi =======
+[*] Đang kiểm tra Command Injection trên: http://localhost/thucung/trangchu.php
+[✓] Không phát hiện lỗ hổng CMDi.
+
+
+======= XXE =======
+[*] Đang kiểm tra XXE trên: http://localhost/thucung/trangchu.php
+[!] Không tìm thấy form upload trên trang.
+

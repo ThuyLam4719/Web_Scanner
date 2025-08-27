@@ -1,17 +1,22 @@
 from flask import Flask, request, render_template, jsonify, redirect, url_for
 from scanners.sqli import scan_sqli
 from scanners.xss import scan_xss
-from scanners.lfi import scan_lfi
 from scanners.cmd import scan_cmdi
 from scanners.xxe import scan_xxe
 from io import StringIO
 import os
 from urllib.parse import urlparse
 from datetime import datetime
+import re
 
 app = Flask(__name__)
 HISTORY_DIR = "history"
-
+URL_PATTERN = re.compile(r"^https?://("
+    r"localhost"                        # cho phép localhost
+    r"|\d{1,3}(?:\.\d{1,3}){3}"         # cho phép IPv4
+    r"|[A-Za-z0-9.-]+\.[A-Za-z]{2,}"    # cho phép domain bình thường
+    r")(:\d+)?(/.*)?$"                  # port và path tùy chọn)
+)
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -19,6 +24,10 @@ def index():
 @app.route("/scan", methods=["POST"])
 def scan():
     url = request.form.get("url")
+    if not url:
+        return "URL không được bỏ trống", 400
+    if not URL_PATTERN.match(url):
+        return "URL không hợp lệ", 400
     output = StringIO()
     # Quét SQLi
     try:
@@ -33,13 +42,6 @@ def scan():
         xss_result = output2.getvalue()
     except Exception as e:
         xss_result = f"[Lỗi XSS] {e}\n"
-    # Quét LFI
-    output3 = StringIO()
-    try:
-        scan_lfi(url, output3)
-        lfi_result = output3.getvalue()
-    except Exception as e:
-        lfi_result = f"[Lỗi LFI] {e}\n"
     # Quét Command Injection
     output4 = StringIO()
     try:
@@ -55,14 +57,12 @@ def scan():
     except Exception as e:
         xxe_result = f"[Lỗi XXE] {e}\n"
     # Tổng hợp kết quả
-    all_result = sqli_result + "\n" + xss_result + "\n" + lfi_result + "\n" + cmdi_result + "\n" + xxe_result
+    all_result = sqli_result + "\n" + xss_result + "\n" + "\n" + cmdi_result + "\n" + xxe_result
     vulns = []
     if ("Có thể bị tấn công SQLi" in sqli_result) or ("payload" in sqli_result and "Không phát hiện lỗ hổng SQLi" not in sqli_result):
         vulns.append("SQLi")
     if ("Có thể bị tấn công XSS" in xss_result) or ("Phát hiện XSS" in xss_result):
         vulns.append("XSS")
-    if ("Có thể bị tấn công LFI" in lfi_result):
-        vulns.append("LFI")
     if ("Có thể bị tấn công CMDi" in cmdi_result) or ("Có thể bị tấn công Command Injection" in cmdi_result):
         vulns.append("CMDi")
     if ("Có thể bị tấn công XXE" in xxe_result):
@@ -96,8 +96,10 @@ def history():
                         v.append("SQLi")
                     if "Có thể bị tấn công XSS" in content or "Phát hiện XSS" in content:
                         v.append("XSS")
-                    if "Có thể bị tấn công LFI" in content:
-                        v.append("LFI")
+                    if "Có thể bị tấn công CMDi" in content:
+                        v.append("CMDi")
+                    if "Có thể bị tấn công XXE" in content:
+                        v.append("XXE")
                     vuln_name = ", ".join(v) if v else "AN TOÀN"
                 history_data.append({
                     "domain": domain,
